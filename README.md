@@ -24,7 +24,7 @@ _For detailed status of this proposal see [TODO](#todo), below._
 > NOTE: See https://github.com/rbuckton/proposal-regexp-features for an overview of
 > how this proposal fits into other possible future features for Regular Expressions.
 
-The `\R` escape sequence matches the various sets of code points that match a unicode line terminator, which can be difficult to write correctly.
+The `\R` escape sequence matches the various sets of code points that match a Unicode line terminator, which can be difficult to write correctly.
 
 <!--#endregion:motivations-->
 
@@ -49,7 +49,7 @@ See https://rbuckton.github.io/regexp-features/features/line-endings-escape.html
 
 > NOTE: Requires the `u` or `v` flags, as `\R` is currently just an escape for `R` without the `u` flag.
 
-> NOTE: Not supported inside of a character class.
+> NOTE: `\R` is not supported inside a character class.
 
 
 <!--#endregion:syntax-->
@@ -72,7 +72,7 @@ See https://rbuckton.github.io/regexp-features/features/line-endings-escape.html
 # Examples
 
 ```js
-// split lines regardless of line termiantor style
+// split lines regardless of line terminator style
 const lines = fs.readFileSync("file.txt", "utf8").split(/\R/ug);
 ```
 
@@ -129,7 +129,7 @@ The following is a high-level list of tasks to progress through each stage of th
 ### Stage 4 Entrance Criteria
 
 * [ ] [Test262](https://github.com/tc39/test262) acceptance tests have been written for mainline usage scenarios and [merged][Test262PullRequest].  
-* [ ] Two compatible implementations which pass the acceptance tests: [\[1\]][Implementation1], [\[2\]][Implementation2].  
+* [ ] Two compatible implementations that pass the acceptance tests: [\[1\]][Implementation1], [\[2\]][Implementation2].  
 * [ ] A [pull request][Ecma262PullRequest] has been sent to tc39/ecma262 with the integrated spec text.  
 * [ ] The ECMAScript editor has signed off on the [pull request][Ecma262PullRequest].  
 <!--#endregion:todo-->
